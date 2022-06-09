@@ -1,3 +1,8 @@
+const loader = document.querySelector('.load');
+
+window.addEventListener('load', () => {
+    loader.classList.add('hidden');
+})
 let side1 = document.getElementById('side1');
 let side2 = document.getElementById('side2');
 
@@ -28,4 +33,3 @@ darkModeToggle.addEventListener('click', () => {
     darkMode = localStorage.getItem('darkMode');
     darkMode !== 'enabled' ? enableDarkMode() : disableleDarkMode();
 })
-

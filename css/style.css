@@ -315,13 +315,13 @@ template {
 :root {
   --color-bg:#222;
   --color-main: rgb(40, 155, 229);
-  --color-text-2:#78A328;
+  --color-spec:#000000;
 }
 
 .dark {
   --color-bg:rgb(255, 255, 255);
   --color-main: rgb(52, 53, 54);
-  --color-text-2:#78A328;
+  --color-spec:#rgb(248, 248, 248) ;
 }
 
 * {
@@ -353,6 +353,96 @@ a {
   text-decoration: none;
 }
 
+.load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  background-color: #222;
+}
+
+.load.hidden {
+  visibility: hidden;
+}
+
+.load_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.load_rotate {
+  position: absolute;
+  border: 5px solid var(--color-spec);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-animation: rotate 1.2s linear infinite;
+          animation: rotate 1.2s linear infinite;
+}
+
+.load_text {
+  color: var(--color-main);
+  font-size: 22px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    border-left-color: var(--color-main);
+  }
+  25% {
+    border-left-color: var(--color-main);
+  }
+  50% {
+    border-left-color: var(--color-main);
+  }
+  75% {
+    border-left-color: var(--color-main);
+  }
+  100% {
+    border-left-color: var(--color-main);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    border-left-color: var(--color-main);
+  }
+  25% {
+    border-left-color: var(--color-main);
+  }
+  50% {
+    border-left-color: var(--color-main);
+  }
+  75% {
+    border-left-color: var(--color-main);
+  }
+  100% {
+    border-left-color: var(--color-main);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 header {
   position: fixed;
   top: 0;
