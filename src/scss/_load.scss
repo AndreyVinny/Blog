@@ -1,0 +1,54 @@
+.load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background-color: #222;
+}
+
+.load.hidden{
+    visibility: hidden;
+}
+
+.load_cont {
+    @include flex (column, center, center, nowrap);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.load_rotate {
+    position: absolute;
+    border: 5px solid var(--color-spec);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rotate 1.2s linear infinite;
+}
+
+.load_text {
+    color: var(--color-main);
+    font-size: 22px;
+}
+
+@keyframes rotate {
+    0% {
+        border-left-color: var(--color-main);
+    }
+    25% {
+        border-left-color: var(--color-main);
+    }
+    50% {
+        border-left-color: var(--color-main);
+    }
+    75% {
+        border-left-color: var(--color-main);
+    }
+    100% {
+        border-left-color: var(--color-main);
+        transform: rotate(360deg);
+    }
+}
